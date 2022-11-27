@@ -13,7 +13,7 @@ At the [home page](https://erick-sudo.github.io/toyproblems) there is a link to 
 ***
 
 ## Live Link
-You can access the web application directly via this [LINK.](https://erick-sudo.github.io/toyproblems)
+You can access the web application directly via this [Toy Problems](https://erick-sudo.github.io/toyproblems)
 *****
 
 ## Technologies Used
@@ -22,7 +22,7 @@ You can access the web application directly via this [LINK.](https://erick-sudo.
 3. JavaScript
 *****
 ## Contact
-* Email : [erickochieng766@gmail.com](mailto: erickochieng766@gmail.com)
+* Email : [erickochieng766@gmail.com](mailto://erickochieng766@gmail.com)
 * GitHub : [github.com/erick-sudo](https://github.com/erick-sudo)
 *****
 ## [License](LICENSE)
