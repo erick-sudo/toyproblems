@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Salary</title>
+    <style>
+        html{
+            background-color: rgb(163, 130, 130);
+        }
+        h1{
+            text-align: center;
+        }
+        #input{
+            background-color: transparent;
+        }
+        #input input{
+            display: block;
+            margin: 2% auto;
+            background-color: rgb(163, 130, 130);
+            border-radius: 0.3em;
+            width: 65%;
+            padding: 0.3em;
+            border: solid 1px white;
+            text-align: center;
+        }
+        #output div{
+            margin-top: 2em;
+            display: flex;
+        }
+        #center{
+            background-color: rgba(163, 130, 13, 1);
+            width: 50%;
+            margin: 0 auto;
+            padding: 2em;
+            border-radius: 0.6em;
+            box-shadow: 0.04em 0.04em 0.8em rgb(7, 85, 74);
+        }
+        label{
+            width: 40%;
+            text-align: right;
+            padding-right: 2em;
+            font-weight: bolder;
+        }
+        span{
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.2em;
+        }
+        #net{
+            border-top: double 2px black;
+            padding-top: 0.5em;
+            color: rgb(92, 31, 9)
+        }
+    </style>
+</head>
+<body>
+    <div id="center">
+        <h1>Net Salary Calculator</h1>
+        <div id="input">
+            <input id="basic" oninput="handleSalary(event)" class="input" type="number" placeholder="Basic Salary">
+            <input class="allowances" oninput="handleSalary(event)" class="input" type="number" placeholder="Allowance 1">
+            <input class="allowances" oninput="handleSalary(event)" class="input" type="number" placeholder="Allowance 2">
+            <input class="allowances" oninput="handleSalary(event)" class="input" type="number" placeholder="Allowance 3">
+            <input class="allowances" oninput="handleSalary(event)" class="input" type="number" placeholder="Allowance 4">
+        </div>
+        <div id="output">
+            <div><label>NHIF</label><span id="nhif">0</span></div>
+            <div><label>NSSF</label><span id="nssf">0</span></div>
+            <div id="un-payee"><label>PAYE</label><span id="paye">0</span></div>
+            <div id="net"><label>NET SALARY</label><span id="netsalary">0</span></div>
+        </div>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+</html>
