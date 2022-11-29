@@ -1,10 +1,12 @@
 //Calculate the total gross pay
 function grossIncome(...values) {
     let sum = 0
+    // Loop through all values and add to basic salary
     for(let value of values) {
         sum+=value
     }
 
+    // Return the total sum of Basic Salary and all allowances
     return sum
 }
 
@@ -30,6 +32,7 @@ function speedGovernor(speed){
     if(speed <= 70){
         return "OK"
     } else {
+        //Calculate the demerit points
         const demeritPoints = Math.floor((speed - 70)/5)
 
         return demeritPoints>12 ? 'License Suspended' : `${demeritPoints} Demerit Points!`
@@ -38,7 +41,7 @@ function speedGovernor(speed){
 
 //Calculate NHIF deduction
 function NHIF(grossPay) {
-
+    
     if(grossPay < 6000){
         return 150
     }
@@ -111,7 +114,8 @@ function NSSF(pensionablePay){
 }
 
 
-//Calculate grossPay
+//Calculate taxable income
+//Subtracting all deductions from grosspay
 function taxableIncome(grossPay,...deductions) {
     for(let deduction of deductions){
         grossPay-=deduction
@@ -119,7 +123,7 @@ function taxableIncome(grossPay,...deductions) {
     return grossPay
 }
 
-//Calculate PAYE
+//Calculate PAYE from TaxableIncome
 function calculatePayee(taxableIncome) {
     switch(taxableIncome) {
         case taxableIncome<=24000:
@@ -131,10 +135,12 @@ function calculatePayee(taxableIncome) {
     }
 }
 
+//oninput grade handler
 function handleGrade(event) {
     document.getElementById("grade").textContent = grade(parseInt(document.getElementById("marks").value))
 }
 
+//oninput speed handler
 function handleSpeed(event){
     let speed = parseInt(document.getElementById("speed").value)
     let points = speedGovernor(speed)
@@ -147,6 +153,8 @@ function handleSpeed(event){
     }
 }
 
+
+//Oninput salary calculator event handler
 function handleSalary(event){
     let b = document.getElementById("basic").value
     let basic = Boolean(b) ? parseFloat(b) : 0
@@ -164,6 +172,7 @@ function handleSalary(event){
 
     let net = (taxableincome - payee) - nhif- nssf
 
+    //Updating the DOM
     document.getElementById("nhif").textContent = nhif
     document.getElementById("nssf").textContent = nssf
     document.getElementById("paye").textContent = payee
