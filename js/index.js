@@ -21,9 +21,10 @@ function grade(marks) {
             return "C"
         } else if(marks < 80) {
             return "B"
-        } else {
+        } else if(marks <=100) {
             return "A"
-        }
+        } else {
+            return "Please Enter Valid Marks"
 }
 
 
