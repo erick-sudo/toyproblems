@@ -13,7 +13,7 @@ function grossIncome(...values) {
 // A function that takes marks as an argument
 // and assigns a grade
 function grade(marks) {
-        if (marks < 40){
+        if (marks < 40) {
             return "E"
         } else if(marks < 50) {
             return "D"
@@ -25,6 +25,7 @@ function grade(marks) {
             return "A"
         } else {
             return "Please Enter Valid Marks"
+        }
 }
 
 
