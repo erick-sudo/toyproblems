@@ -18,6 +18,9 @@
             background-color: transparent;
         
         }
+        #marks{
+            width: 50%;
+        }
         h1{
             text-align: center;
         }
@@ -52,7 +55,7 @@
         <h1>
             Student Grade Calculator
         </h1>
-        <input id="marks" oninput="handleGrade(event)" type="number" placeholder="Input Marks">
+        <input id="marks" oninput="handleGrade(event)" type="number" min="0" max="100" placeholder="Input Marks">
         <button id="calculate" onclick="handleGrade(event)">Calculate</button>
         <div id="grade">E</div>
     </div>
